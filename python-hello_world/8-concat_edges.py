@@ -2,4 +2,4 @@
 str = "object-oriented programming with Python language"
 
 
-print(s[0:19] + s[19:39])
+print(str[0:19] + str[19:39])
