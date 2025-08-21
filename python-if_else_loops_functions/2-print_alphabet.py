@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 
-# Final optimized solution
-for code in range(97, 123):
-    print(chr(code), end="")
-print()
+# Tək print, tək sətir, tam uyğun
+print("".join(chr(code) for code in range(97, 123)), end="")
