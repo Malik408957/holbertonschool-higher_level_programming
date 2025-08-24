@@ -20,7 +20,7 @@ def print_last_digit(number):
     # Return the last digit value
     return last_digit
 
-# Test the function (this part is for testing only)
+
 if __name__ == "__main__":
     print_last_digit(98)
     print_last_digit(0)
