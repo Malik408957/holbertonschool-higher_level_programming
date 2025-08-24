@@ -1,15 +1,7 @@
 #!/usr/bin/python3
 
 def print_last_digit(number):
-    """
-    Prints and returns the last digit of a number.
-    
-    Args:
-        number: The input number (can be positive, negative or zero)
-    
-    Returns:
-        The last digit of the number (always positive)
-    """
+    """Print the last digit of a number and return it."""
     # Get the absolute value to handle negative numbers
     # Use modulo 10 to get the last digit
     last_digit = abs(number) % 10
