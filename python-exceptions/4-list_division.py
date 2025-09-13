@@ -13,22 +13,14 @@ def list_division(my_list_1, my_list_2, list_length):
     for i in range(list_length):
         result = 0
         try:
-            # Try to get elements from both lists
-            element1 = my_list_1[i]
-            element2 = my_list_2[i]
-            # Check if elements are numbers - TypeError üçün
-            if not isinstance(element1, (int, float)) or not isinstance(element2, (int, float)):
-                print("wrong type")
-                raise TypeError  # Xətanı yuxarıya atırıq
-            # Perform division
-            result = element1 / element2
+            # Birbaşa bölməni cəhd et, bütün xətaları except ilə tut
+            result = my_list_1[i] / my_list_2[i]
         except ZeroDivisionError:
             print("division by 0")
         except IndexError:
             print("out of range")
-        except TypeError:
-            # Bu artıq isinstance yoxlamasında tutulur
-            pass
+        except (TypeError, ValueError):
+            print("wrong type")
         finally:
             result_list.append(result)
     return result_list
