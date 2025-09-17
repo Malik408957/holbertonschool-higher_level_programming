@@ -56,7 +56,6 @@ class Rectangle:
         """Return string representation of rectangle with # characters"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        
         rectangle_str = []
         for i in range(self.__height):
             rectangle_str.append("#" * self.__width)
