@@ -56,11 +56,12 @@ class Rectangle:
         """Return string representation of rectangle with # characters"""
         if self.__width == 0 or self.__height == 0:
             return ""
+
         rectangle_str = []
         for i in range(self.__height):
             rectangle_str.append("#" * self.__width)
         return "\n".join(rectangle_str)
 
     def __repr__(self):
-        """Return official string representation that can be used with eval()"""
+        """Return official string representation for eval()"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
