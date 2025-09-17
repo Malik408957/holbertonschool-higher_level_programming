@@ -1,46 +1,26 @@
 #!/usr/bin/python3
 """
 3-rectangle module
-Bu modul Rectangle sinifini təyin edir, eni və hündürlüyü olan düzbucaqlı.
-Sahə, perimetr hesablama və string təmsili metodlarına malikdir.
+Contains Rectangle class with width, height, area, perimeter and string representation
 """
 
 
 class Rectangle:
-    """
-    Rectangle sinifi.
-    Eni və hündürlüyü olan düzbucaqlını təmsil edir.
-    Sahə, perimetr hesablamaq və string formatında çap etmək üçün metodlara malikdir.
-    """
+    """Rectangle class with width, height, area, perimeter and string rep"""
 
     def __init__(self, width=0, height=0):
-        """
-        Rectangle sinifinin konstruktoru.
-
-        Args:
-            width (int, optional): Düzbucaqlının eni. Default 0.
-            height (int, optional): Düzbucaqlının hündürlüyü. Default 0.
-        """
+        """Initialize rectangle with optional width and height"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """width atributunun getter metodu"""
+        """Get width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        width atributunun setter metodu.
-
-        Args:
-            value (int): Yeni en dəyəri
-
-        Raises:
-            TypeError: Əgər value integer deyilsə
-            ValueError: Əgər value 0-dan kiçiksə
-        """
+        """Set width with validation"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -49,21 +29,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """height atributunun getter metodu"""
+        """Get height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        height atributunun setter metodu.
-
-        Args:
-            value (int): Yeni hündürlük dəyəri
-
-        Raises:
-            TypeError: Əgər value integer deyilsə
-            ValueError: Əgər value 0-dan kiçiksə
-        """
+        """Set height with validation"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -71,34 +42,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """
-        Düzbucaqlının sahəsini hesablayır.
-
-        Returns:
-            int: Düzbucaqlının sahəsi (eni * hündürlük)
-        """
+        """Calculate and return area"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """
-        Düzbucaqlının perimetrini hesablayır.
-
-        Returns:
-            int: Düzbucaqlının perimetri (2 * (eni + hündürlük))
-            Əgər eni və ya hündürlüyü 0-dırsa, 0 qaytarır.
-        """
+        """Calculate and return perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """
-        Düzbucaqlının string təmsilini yaradır.
-
-        Returns:
-            str: Düzbucaqlının # simvolları ilə çəkilmiş forması
-            Əgər eni və ya hündürlüyü 0-dırsa, boş string qaytarır.
-        """
+        """Return string representation of rectangle"""
         if self.__width == 0 or self.__height == 0:
             return ""
 
