@@ -32,7 +32,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-        width atributunun setter metodu
+        width atributunun setter metodu.
 
         Args:
             value (int): Yeni en dəyəri
@@ -55,7 +55,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """
-        height atributunun setter metodu
+        height atributunun setter metodu.
 
         Args:
             value (int): Yeni hündürlük dəyəri
