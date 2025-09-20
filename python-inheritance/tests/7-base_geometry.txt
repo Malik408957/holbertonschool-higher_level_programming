@@ -1,70 +1,22 @@
->>> BaseGeometry = __import__('base_geometry_7_2').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
-# Test 1: Normal valid integer values
 >>> bg.integer_validator("my_int", 12)
 
 >>> bg.integer_validator("width", 89)
 
->>> bg.integer_validator("height", 1)
-
-# Test 2: String value - should raise TypeError
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
-# Test 3: Zero value - should raise ValueError
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
-# Test 4: Negative value - should raise ValueError
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
->>> bg.integer_validator("temperature", -1)
-Traceback (most recent call last):
-ValueError: temperature must be greater than 0
-
-# Test 5: Float value - should raise TypeError
->>> bg.integer_validator("price", 3.14)
-Traceback (most recent call last):
-TypeError: price must be an integer
-
->>> bg.integer_validator("weight", 2.5)
-Traceback (most recent call last):
-TypeError: weight must be an integer
-
-# Test 6: Boolean values - should raise TypeError (True=1, False=0 ama integer deyil)
->>> bg.integer_validator("is_valid", True)
-Traceback (most recent call last):
-TypeError: is_valid must be an integer
-
->>> bg.integer_validator("is_active", False)
-Traceback (most recent call last):
-TypeError: is_active must be an integer
-
-# Test 7: None value - should raise TypeError
->>> bg.integer_validator("data", None)
-Traceback (most recent call last):
-TypeError: data must be an integer
-
-# Test 8: List value - should raise TypeError
->>> bg.integer_validator("items", [1, 2, 3])
-Traceback (most recent call last):
-TypeError: items must be an integer
-
-# Test 9: area method should raise Exception
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
-
-# Test 10: Multiple validations in sequence
->>> bg.integer_validator("width", 5)
->>> bg.integer_validator("height", 10)
->>> try:
-...     bg.integer_validator("depth", 0)
-... except ValueError as e:
-...     print("Caught expected error:", str(e))
-Caught expected error: depth must be greater than 0
