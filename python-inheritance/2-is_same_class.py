@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """
-
-
 2. Exact same object
 This module contains a function that checks if an object is exactly
 an instance of the specified class.
 """
+
 
 def is_same_class(obj, a_class):
     """
