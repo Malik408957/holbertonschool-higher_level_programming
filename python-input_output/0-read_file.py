@@ -4,6 +4,7 @@
 Function that reads a text file and prints it to stdout
 """
 
+
 def read_file(filename=""):
     """
     Read a UTF8 text file and print its content to stdout
