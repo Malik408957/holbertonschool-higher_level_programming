@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""
+Module for creating objects from JSON files
+"""
 import json
+
 
 def load_from_json_file(filename):
     """
