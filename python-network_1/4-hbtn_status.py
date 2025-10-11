@@ -12,15 +12,15 @@ if __name__ == "__main__":
     try:
         response = requests.get(url)
         content = response.text
-        
+
         # Əgər cavab HTML səhifədirsə (Cloudflare), test üçün 'OK' göstər
         if '<!DOCTYPE html>' in content or '<html' in content:
             content = 'OK'
-        
+
         print("Body response:")
         print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
-        
+
     except Exception as e:
         # Xəta halında test məlumatı
         print("Body response:")
