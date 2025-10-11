@@ -10,7 +10,8 @@ if __name__ == "__main__":
 
     # Request obyekti yaradıb User-Agent əlavə edirik
     req = urllib.request.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    req.add_header('User-Agent', user_agent)
 
     try:
         with urllib.request.urlopen(req) as response:
