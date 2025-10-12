@@ -11,10 +11,8 @@ import sys
 if __name__ == "__main__":
     # Get URL from command line argument
     url = sys.argv[1]
-    
     # Send GET request
     response = requests.get(url)
-    
     # Check status code
     if response.status_code >= 400:
         print("Error code:", response.status_code)
