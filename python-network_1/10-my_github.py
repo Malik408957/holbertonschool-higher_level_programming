@@ -11,16 +11,12 @@ if __name__ == "__main__":
     # Get username and password from command line arguments
     username = sys.argv[1]
     password = sys.argv[2]
-    
-    # MOCK GitHub API URL (local server)
-    url = "http://0.0.0.0:5000/user"
-    
+    # REAL GitHub API URL (github.com server)
+    url = "https://api.github.com/user"
     # Create authentication tuple
     auth = (username, password)
-    
     # Send GET request with authentication
     response = requests.get(url, auth=auth)
-    
     # Check if request was successful
     if response.status_code == 200:
         # Parse JSON response and get user ID
