@@ -23,7 +23,9 @@ if __name__ == "__main__":
         json_response = response.json()
         if json_response:
             # Display id and name if JSON is not empty
-            print("[{}] {}".format(json_response.get('id'), json_response.get('name')))
+            id_val = json_response.get('id')
+            name_val = json_response.get('name')
+            print("[{}] {}".format(id_val, name_val))
         else:
             # Display if JSON is empty
             print("No result")
