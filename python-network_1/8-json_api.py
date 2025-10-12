@@ -13,14 +13,11 @@ if __name__ == "__main__":
         letter = sys.argv[1]
     else:
         letter = ""
-    
     # Prepare URL and data
     url = "http://0.0.0.0:5000/search_user"
     data = {'q': letter}
-    
     # Send POST request
     response = requests.post(url, data=data)
-    
     # Process JSON response
     try:
         json_response = response.json()
